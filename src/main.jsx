@@ -10,7 +10,16 @@ import {
 } from 'react-router-dom';
 
 import Layout from './Pages/Layout';
-import PDFUploaderPage from './Pages/Pdfupload';
+// import PDFUploaderPage from './Pages/Pdfupload';
+
+// import Myworkflow from './Pages/Myworkflow';
+import PDFProcessor from './Pages/PdfProcessor';
+// import PDFManagement from './Pages/ViewPdf';
+// import Myworkflow from './Pages/MyWorkflow';
+import PDFWorkflow from './Pages/PdfWorkflow';
+import PDFViewer from './Pages/PdfViewer';
+// import UploadPdf from './Pages/Pdf';
+
 
 
 
@@ -23,13 +32,27 @@ const App = () => {
       <Route>
         <Route path="/" element={<Layout />}>
           <Route
-            path="/new-workflow"
+            path="/"
             element={
-              
-                <PDFUploaderPage />
+              // <Myworkflow/>
+              // <PDFProcessor />
+              // <UploadPdf/>
+              // <PDFManagement/>
+              <PDFWorkflow/>
              
             }
           />
+
+          <Route
+            path="/new-workflow"
+            element={
+              
+              // <PDFUploaderPage />
+              <PDFProcessor />
+             
+            }
+          />
+          <Route path="/pdf-viewer" component={PDFViewer} />
          
           
         </Route>

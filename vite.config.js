@@ -18,7 +18,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://legal-ai-backend-draft-drh9bmergvh7a4a9.southeastasia-01.azurewebsites.net',
+        target: 'http://4.240.101.229:8000',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }

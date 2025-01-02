@@ -12,8 +12,11 @@ function Layout() {
 
   return (
     <div className="flex">
-     <Sidebar/>
-        <div className="overflow-y-scroll w-full">
+      <div className="fixed">
+<Sidebar/>
+      </div>
+     
+        <div className="overflow-y-scroll w-full ml-[250px]">
           <Outlet />
         </div>
     </div>
